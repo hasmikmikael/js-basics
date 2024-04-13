@@ -11,3 +11,8 @@ console.log(name);
 
 let firstName = 'Tim'; //Camel Notation
 let lastName = 'Smith';
+
+//-------------Constants-------------
+const interestRate = 0.3;
+// interestRate = 1; // we cannon reassign 
+console.log(interestRate);
