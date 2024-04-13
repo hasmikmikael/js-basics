@@ -16,3 +16,10 @@ let lastName = 'Smith';
 const interestRate = 0.3;
 // interestRate = 1; // we cannon reassign 
 console.log(interestRate);
+
+//---------Primitive Types------------
+let fullName = 'Tim Smith'; // String Literal
+let age = 30; // Number Literal
+let isApproved = false; // Boolean Literal
+let size = undefined;
+let selectedColor = null;
