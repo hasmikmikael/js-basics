@@ -20,3 +20,12 @@ console.log(y); // 4
 console.log(z--); // 5
 console.log(z); // 4
 console.log(--k); // 6
+
+//------------Assignment Operators----------
+let a = 10; // Assignment Operator
+
+// a++; or a = a + 1;
+
+a += 5; // Addition Assignment Operator // a = a + 5;
+a *= 3; // Multiplication Assignment Operator // a = a * 3;
+// and so on
