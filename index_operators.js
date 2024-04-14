@@ -29,3 +29,16 @@ let a = 10; // Assignment Operator
 a += 5; // Addition Assignment Operator // a = a + 5;
 a *= 3; // Multiplication Assignment Operator // a = a * 3;
 // and so on
+
+//---------Comparison Operators-----------
+let b = 1;
+
+// Relational Operators
+console.log(b > 0); // b is greater than 0 // Greater Than Operator
+console.log(b >= 1); // Greater Than or Equal To Operator
+console.log(b < 1); // Less Than Operator
+console.log(b <= 1); // Less Than or Equal To Operator
+
+// Equality Operator
+console.log(b === 1); // b is equal to 1
+console.log(b !== 1); // b is not equal to 1
