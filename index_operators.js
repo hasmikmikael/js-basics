@@ -63,3 +63,27 @@ let points = 110;
 let type = points > 100 ? 'gold' : 'silver'; // ? Ternary or Conditional Operator
 
 console.log(type);
+
+//------------Logical Operators--------
+
+// Logical AND (&&)
+// Returns TRUE if both operands are TRUE
+console.log(true && true); // true
+console.log(false && true); // false
+
+// Real World Use Case
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+
+console.log(eligibleForLoan);
+
+// Logical OR (||)
+// Returns TRUE if one of the operands is TRUE
+console.log(false || true); // true
+console.log(false || false); // false
+
+// NOT (!)
+let applicationRefused = !eligibleForLoan;
+
+console.log(applicationRefused); // false
