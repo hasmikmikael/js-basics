@@ -40,3 +40,10 @@ person.name = 'John';
 person['name'] = 'Mary';
 
 console.log(person);
+
+//--------Arrays--------------
+// Square brackets are called Array Literal
+let selectedColors = ['red', 'blue'];
+selectedColors[2] = 1;
+console.log(selectedColors);
+console.log(selectedColors.length);
