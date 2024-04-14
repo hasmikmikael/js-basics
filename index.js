@@ -23,3 +23,20 @@ let age = 30; // Number Literal
 let isApproved = false; // Boolean Literal
 let size = undefined;
 let selectedColor = null;
+
+//-------Objects-------------
+// Curly braces are called Object Literal
+// Between curly braces we add 1 or more key value pairs
+// Keys are called properties of the object
+let person = {
+    name: 'Tim',
+    age: 30
+};
+
+// Dot Notation
+person.name = 'John';
+
+// Bracket Notation
+person['name'] = 'Mary';
+
+console.log(person);
