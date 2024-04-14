@@ -41,4 +41,14 @@ console.log(b <= 1); // Less Than or Equal To Operator
 
 // Equality Operator
 console.log(b === 1); // b is equal to 1
-console.log(b !== 1); // b is not equal to 1
+console.log(b !== 1); // b is not equal to 
+
+//---------Equality Operators----------
+// Strict Equality (Type + Value)
+console.log(1 === 1); // true
+console.log('1' === 1); // false
+
+// Lose Equality (Value)
+console.log(1 == 1); // true
+console.log('1' == 1); // true
+console.log(true == 1); // true
