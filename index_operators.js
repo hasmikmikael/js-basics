@@ -52,3 +52,14 @@ console.log('1' === 1); // false
 console.log(1 == 1); // true
 console.log('1' == 1); // true
 console.log(true == 1); // true
+
+//--------Ternary Operator--------
+
+// If a customer has more than 100 points,
+// they are a 'gold' customer, otherwise,
+// they are a 'silver' customer.
+
+let points = 110;
+let type = points > 100 ? 'gold' : 'silver'; // ? Ternary or Conditional Operator
+
+console.log(type);
