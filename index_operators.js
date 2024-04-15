@@ -145,3 +145,10 @@ let message =
   (myPermission & readPermission) ? 'yes' : 'no';
 
 console.log(message); // yes
+
+//----------------Operators Precedence------------
+let c = 2 + 3 * 4;
+console.log(c); // 14
+
+let d = (2 + 3) * 4;
+console.log(d); // 20
