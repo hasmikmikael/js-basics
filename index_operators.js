@@ -152,3 +152,21 @@ console.log(c); // 14
 
 let d = (2 + 3) * 4;
 console.log(d); // 20
+
+
+//-------------Exercise----------------
+let m = 'red';
+let n = 'blue';
+
+console.log(m);
+console.log(n);
+
+// Swap values of these two variables.
+
+// Solution
+let o = m;
+m = n;
+n = o;
+
+console.log(m);
+console.log(n);
