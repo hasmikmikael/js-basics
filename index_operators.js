@@ -117,3 +117,31 @@ let defaultColor = 'blue';
 let currentColor = userColor || defaultColor;
 
 console.log(currentColor); // blue
+
+//--------Bitwise Operators---------------
+
+// 1 = 00000001
+// 2 = 00000010
+// 3 = 00000011
+// 0 = 00000000
+
+console.log(1 | 2); // Bitwise OR // 3
+console.log(1 & 2); // Bitwise AND // 0
+
+// Read, Write, Execute
+// 00000100 = 4
+// 00000010 = 2
+// 00000001 = 1
+
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+console.log(myPermission); // 6
+
+let message = 
+  (myPermission & readPermission) ? 'yes' : 'no';
+
+console.log(message); // yes
