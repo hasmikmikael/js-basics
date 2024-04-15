@@ -87,3 +87,33 @@ console.log(false || false); // false
 let applicationRefused = !eligibleForLoan;
 
 console.log(applicationRefused); // false
+
+//------Logical Operators with Non-booleans---------
+
+// false || 'Tim' // 'Tim'
+// false || 1 // 1
+
+// Falsy (they are not boolean false)
+// undefined
+// null
+// 0
+// false
+// ''
+// NaN
+
+// Anything that is not Falsy -> Truthy
+
+// Short-circuiting
+// false || 1 || 2 // 1
+
+// let userColor = 'red';
+// let defaultColor = 'blue';
+// let currentColor = userColor || defaultColor;
+
+// console.log(currentColor); // red
+
+let userColor = undefined;
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor); // blue
