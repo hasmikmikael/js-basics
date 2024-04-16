@@ -25,3 +25,24 @@ else if (hour <= 12 && hour < 18) {
 }
 else
     console.log('Good evening');
+
+//-----------Switch...case----------
+let role = 'guest';
+
+switch (role) {
+    case 'guest':
+        console.log('Guest User');
+        break;
+
+    case 'moderator':
+        console.log('Moderator User');
+        break;
+
+    default:
+        console.log('Unknown User');
+}
+
+//or with if...else
+if (role === 'guest') console.log('Guest User');
+else if (role === 'moderator') console.log('Moderator User');
+else console.log('Unknown User');
