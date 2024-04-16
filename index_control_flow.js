@@ -46,3 +46,22 @@ switch (role) {
 if (role === 'guest') console.log('Guest User');
 else if (role === 'moderator') console.log('Moderator User');
 else console.log('Unknown User');
+
+//------------For-------------------
+
+// for (initialExpression; condition; incrementExpression) {
+//     statement
+// }
+
+for (let i = 0; i < 5; i++) {
+    console.log('Hello World', i);
+}
+
+for (let i = 1; i <= 5; i++) {
+    // remainder of the devision of i by 2 is not 0
+    if (i % 2 !== 0) console.log(i);
+}
+
+for (let i = 5; i >= 1; i--) {
+    if (i % 2 !== 0) console.log(i);
+}
