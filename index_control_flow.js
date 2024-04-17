@@ -79,3 +79,24 @@ do {
     if (j % 2 !== 0) console.log(j);
     j++;
 } while (j <= 5);
+
+//---------Infinite Loops---------
+// let k = 0;
+// while (k < 5) {
+//     console.log(k);
+//     //k++;
+// }
+
+// while (true) {
+// }
+
+// let x = 0;
+// do {
+//     x++;
+// } while (x < 5)
+
+// for (let i = 0; i > 0; i++) {
+// }
+
+// for (let i = 0; i < 10;) {
+// }
