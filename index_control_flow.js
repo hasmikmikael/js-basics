@@ -100,3 +100,26 @@ do {
 
 // for (let i = 0; i < 10;) {
 // }
+
+//---------For...in-------------
+
+// iterate over the properties of an object
+const person = {
+    name: 'Tim',
+    age: 30
+};
+
+for (let key in person)
+  console.log(key, person[key]);
+
+  // Dot Notation
+  person.name
+
+  // Bracket Notation
+  person['name']
+
+  // iterate over the elements in an array
+  const colors = ['red', 'green', 'blue'];
+
+  for (let index in colors)
+    console.log(index, colors[index]);
