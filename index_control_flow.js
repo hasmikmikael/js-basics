@@ -123,3 +123,9 @@ for (let key in person)
 
   for (let index in colors)
     console.log(index, colors[index]);
+
+//----------For...of---------------
+const clrs = ['red', 'green', 'blue'];
+
+for (let color of clrs)
+  console.log(color);
