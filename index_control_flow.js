@@ -129,3 +129,23 @@ const clrs = ['red', 'green', 'blue'];
 
 for (let color of clrs)
   console.log(color);
+
+//---------Break and Continue----------
+let b = 0;
+while (b <= 10) {
+    if (b === 5) break;
+
+    console.log(b);
+    b++;
+} // 0, 1, 2, 3, 4
+
+let c = 0;
+while (c <= 10) {
+    if (c % 2 === 0) {
+        c++;
+        continue;
+    }
+
+    console.log(c);
+    c++;
+} // 1, 3, 5, 7, 9
