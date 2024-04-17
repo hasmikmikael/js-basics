@@ -85,7 +85,7 @@ function showNumbers(limit) {
     }
 }
 
-// exercise 6: Count Truthy
+// Exercise 6: Count Truthy
 
 const array = [null, undefined, 0, true, 1, 2, 3];
 
@@ -97,4 +97,21 @@ function countTruthy(array) {
       if (value)
         count++;
     return count;
+}
+
+// Exercise 7: String Properties
+
+const movie = {
+    title: 'a',
+    releaseYear: 2018,
+    rating: 4.5,
+    director: 'b'
+};
+
+showProperties(movie);
+
+function showProperties(obj) {
+    for (let key in obj)
+      if (typeof obj[key] === 'string')
+        console.log(key, obj[key]);
 }
