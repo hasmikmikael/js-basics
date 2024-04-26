@@ -45,3 +45,18 @@ function Circle(radius) {
 }
 
 const crc = new Circle(1);
+
+//--------Dynamic Nature of Objects--------
+const circ = {
+    radius: 1
+};
+
+// circ = {};
+
+circ.color = 'yellow';
+circ.draw = function() {}
+
+delete circ.color;
+delete circ.draw;
+
+console.log(circ);
