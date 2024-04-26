@@ -16,9 +16,10 @@ const circle = {
 
 circle.draw(); // Method
 
+// Camel Notation: oneTwoThreeFour
+// Pascal Notation: OneTwoThreeFour
 
 //----------Factory Functions-----------
-
 function createCircle(radius) {
     return {
         radius,
@@ -33,3 +34,14 @@ console.log(circle1);
 
 const circle2 = createCircle(2);
 console.log(circle2);
+
+
+//----------Constructor Functions----------
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+const crc = new Circle(1);
