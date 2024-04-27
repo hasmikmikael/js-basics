@@ -60,3 +60,11 @@ delete circ.color;
 delete circ.draw;
 
 console.log(circ);
+
+//------Constructor Property----------
+let x = {}; // we'll get // let x = new Object();
+
+// built-in constructors in JavaScript
+// new String(); // '', "", ``
+// new Boolean(); // true, false
+// new Number(); // 1, 2, 3, ...
