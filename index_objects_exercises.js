@@ -70,3 +70,17 @@ const post = {
 };
 
 console.log(post);
+
+
+// Exercise 5: Constructor Functions
+let pst = new Post('title', 'body', 'author');
+console.log(pst);
+
+function Post(title, body, author) {
+    this.title = title,
+    this.body = body,
+    this.author = author,
+    this.views = 0,
+    this.comments = [],
+    this.isLive = false
+}
