@@ -203,3 +203,23 @@ const anotherString = new String('hi');
 // message.trim();
 // message.trimLeft();
 // message.split(' ');
+
+//---------Template Literals---------
+
+// Object Literals {}
+// Boolean Literals true, fals
+// String Literals '', ""
+// Template Literals ``
+
+const anotherMessage = 
+`This is my
+'first' message`;
+
+const name = 'John';
+const emailMessage =
+`Hi ${name},
+
+Thank you for joining my mailing list.
+
+Regards,
+Mary`;
