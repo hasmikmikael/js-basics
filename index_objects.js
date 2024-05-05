@@ -177,3 +177,9 @@ console.log(anotherProp2);
 // we can use the spread operator to clone an object and this is the best aproach
 const anotherProp = { ...circleProp };
 console.log(anotherProp);
+
+//---------------Math----------
+// Math.random();
+// Math.round(1.9);
+// Math.max(1, 2, 3, 4, 5);
+// Math.min(1, 2, 3, 4, 5);
