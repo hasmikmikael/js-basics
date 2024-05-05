@@ -34,3 +34,23 @@ function Address(street, city, zipCode) {
 
 const add = new Address('5', 'New York', '2213');
 console.log(add);
+
+// Exercise 3: Object Equality
+let address1 = new Address('5', 'New York', '2213');
+let address2 = new Address('5', 'New York', '2213');
+let address3 = address1;
+
+function areEqual(address1, address2) {
+    return address1.street === address2.street &&
+        address1.city === address2.city &&
+        address1.zipCode === address2.zipCode;
+}
+
+// they are different in memory, their references are different
+function areSame(address1, address2) {
+    return address1 === address2;
+}
+
+console.log(areEqual(address1, address2)); // true
+console.log(areSame(address1, address2)); // false
+console.log(areSame(address1, address3)); // true //they are pointing the same object in memory
