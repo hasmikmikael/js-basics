@@ -155,3 +155,25 @@ for (let entries of Object.entries(circleProp))
 
 // checking if an object has a given property or method
 if ('radius' in circleProp) console.log('yes');
+
+
+//-------Cloning an Object----------
+// // this is old approach of cloning an object
+// const anotherProp = {};
+// for (let key in circleProp)
+//     anotherProp[key] = circleProp[key];
+//     // this is equivalent to anotherProp['radius'] = circlrProp['radius'];
+// console.log(anotherProp);
+
+// in modern JavaScript this is the better way
+const anotherProp1 = Object.assign({}, circleProp);
+console.log(anotherProp1);
+
+const anotherProp2 = Object.assign({
+    color: 'yellow'
+}, circleProp);
+console.log(anotherProp2);
+
+// we can use the spread operator to clone an object and this is the best aproach
+const anotherProp = { ...circleProp };
+console.log(anotherProp);
