@@ -183,3 +183,23 @@ console.log(anotherProp);
 // Math.round(1.9);
 // Math.max(1, 2, 3, 4, 5);
 // Math.min(1, 2, 3, 4, 5);
+
+//--------String---------------
+//String primitive
+const message = 'This is my\n first message';
+
+//String object
+const anotherString = new String('hi');
+
+// message.length;
+// message[0];
+// message.includes('my');
+// message.startsWith('This');
+// message.startsWith('this');
+// message.endsWith('e');
+// message.indexOf('my');
+// message.replace('first', 'second');
+// message.toUpperCase();
+// message.trim();
+// message.trimLeft();
+// message.split(' ');
