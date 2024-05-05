@@ -93,3 +93,41 @@ const another1 = new Circle(1);
 // this is like the following
 Circle.call({}, 1);
 Circle.apply({}, [1]);
+
+//-------Value vs Reference Types----------
+let z = 10;
+let y = z;
+
+z = 20;
+
+console.log(y); // 10
+console.log(z); // 20
+
+
+let m = { value: 10 };
+let n = m;
+
+m.value = 20;
+
+console.log(m); // 20
+console.log(n); // 20
+
+
+let number = 10;
+
+function increase(number) {
+    number++;
+}
+
+increase(number); 
+console.log(number); // 10
+
+
+let obj = { value: 10 };
+
+function increase(obj) {
+    obj.value++;
+}
+
+increase(obj); 
+console.log(obj.value); // 11
