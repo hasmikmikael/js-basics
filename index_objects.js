@@ -131,3 +131,27 @@ function increase(obj) {
 
 increase(obj); 
 console.log(obj.value); // 11
+
+
+//------Enumerating Properties of an Object--------
+const circleProp = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+for (let key in circleProp)
+    console.log(key, circle[key]);
+
+// for (let key of circleProp)
+//     console.log(key); // ERROR: circleProp is not iterable
+
+for (let key of Object.keys(circleProp))
+    console.log(key);
+
+for (let entries of Object.entries(circleProp))
+    console.log(entries);
+
+// checking if an object has a given property or method
+if ('radius' in circleProp) console.log('yes');
