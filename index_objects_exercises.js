@@ -54,3 +54,19 @@ function areSame(address1, address2) {
 console.log(areEqual(address1, address2)); // true
 console.log(areSame(address1, address2)); // false
 console.log(areSame(address1, address3)); // true //they are pointing the same object in memory
+
+
+// Exercise 4: Blog Post Object
+const post = {
+    title: 'title',
+    body: 'body',
+    author: 'author',
+    views: 2,
+    comments: [
+      { author: 'author1', body: 'body1' },
+      { author: 'author2', body: 'body2' }
+    ],
+    isLive: false
+};
+
+console.log(post);
