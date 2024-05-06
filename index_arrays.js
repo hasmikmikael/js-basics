@@ -205,3 +205,15 @@ const atLeastOnePositive = numbersT.some(function(value) {
 });
 
 console.log(atLeastOnePositive); // true
+
+
+//----------Filtering an Array-----------
+const numbersF = [1, -1, 2, 3];
+
+// const filtered = numbersF.filter(function(value) {
+//     return value >= 0;
+// });
+
+const filtered = numbersF.filter(n => n >= 0);
+
+console.log(filtered); // [1, 2, 3]
