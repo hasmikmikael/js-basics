@@ -70,3 +70,31 @@ const first = numb.shift();
 console.log(first); // 1
 console.log(numb); // [2]
 
+//------Emptying an Array----------
+let nmb = [1, 2, 3, 4];
+let another = nmb;
+
+// Solution 1 // this is good if we don't have multiple references
+nmb = [];
+
+console.log(nmb); // []
+console.log(another); // [1, 2, 3, 4]
+
+// Solution 2 // the best solution
+nmb.length = 0;
+
+console.log(nmb); // []
+console.log(another); // []
+
+// Solution 3 // a little bit noisy solution
+nmb.splice(0, nmb.length);
+
+console.log(nmb); // []
+console.log(another); // []
+
+// Solution 4 // this will make performance issue
+while (nmb.length > 0)
+    nmb.pop();
+
+console.log(nmb); // []
+console.log(another); // []
