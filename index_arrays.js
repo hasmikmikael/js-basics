@@ -133,3 +133,17 @@ console.log(combinedA); // [1, 2, 3, 4, 5, 6]
 //const copy = combinedA.slice();
 const copy = [...combinedA];
 console.log(copy); // [1, 2, 3, 4, 5, 6]
+
+
+//------Iterating an Array------------
+const nmbs = [1, 2, 3];
+
+for (let nmb of nmbs)
+    console.log(nmb); // 1 \n 2 \n 3
+
+nmbs.forEach(function(nmb) {
+    console.log(nmb); // 1 \n 2 \n 3
+});
+
+nmbs.forEach(nmb => console.log(nmb)); // 1 \n 2 \n 3
+nmbs.forEach((nmb, index) => console.log(index, nmb)); // 0 1 \n 1 2 \n 2 3
