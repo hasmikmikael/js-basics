@@ -51,3 +51,22 @@ console.log(crse);
 //---------Arrow Functions----------
 const crs = courses.find(course => course.name === 'a');
 console.log(crs); // { id: 1, name: 'a' }
+
+
+//----------Removing Elements-----------
+const numb = [1, 2, 3, 4];
+
+// Middle
+numb.splice(2, 1);
+console.log(numb); // [1, 2, 4]
+
+// End
+const last = numb.pop();
+console.log(last); // 4
+console.log(numb); // [1, 2]
+
+// Beginning
+const first = numb.shift();
+console.log(first); // 1
+console.log(numb); // [2]
+
