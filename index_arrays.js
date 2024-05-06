@@ -161,3 +161,32 @@ console.log(parts);
 // we use this technick when we're building a URL slag
 const combinedJ = parts.join('-');
 console.log(combinedJ);
+
+//-----------Sorting Arrays--------------
+const numbersS = [2, 3, 1];
+numbersS.sort();
+console.log(numbersS);
+
+numbersS.reverse();
+console.log(numbersS);
+
+
+const coursesS = [
+    { id: 1, name: 'Node.js' },
+    { id: 2, name: 'javascript' },
+];
+
+coursesS.sort(function(a, b) {
+    // a < b => -1
+    // a > b => 1
+    // a === b => 0
+
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
+});
+
+console.log(coursesS);
