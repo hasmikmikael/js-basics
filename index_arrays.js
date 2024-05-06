@@ -190,3 +190,18 @@ coursesS.sort(function(a, b) {
 });
 
 console.log(coursesS);
+
+//-------Testing the Elements of an Array----------
+const numbersT = [1, -1, 2, 3];
+
+const allPositive = numbersT.every(function(value) {
+    return value >= 0;
+});
+
+console.log(allPositive); // false
+
+const atLeastOnePositive = numbersT.some(function(value) {
+    return value >= 0;
+});
+
+console.log(atLeastOnePositive); // true
