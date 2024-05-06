@@ -98,3 +98,24 @@ while (nmb.length > 0)
 
 console.log(nmb); // []
 console.log(another); // []
+
+
+//----------Combining and Slicing Arrays-------------
+// Primitive types
+const firstArray = [1, 2, 3];
+const secondArray = [4, 5, 6];
+
+const combined = firstArray.concat(secondArray);
+
+const slice = combined.slice(2, 4);
+// const slice = combined.slice(2); // [3, 4, 5, 6]
+// const slice = combined.slice(); // [1, 2, 3, 4, 5, 6]
+
+console.log(combined); // [1, 2, 3, 4, 5, 6]
+console.log(slice); // [3, 4]
+
+// Reference types
+const thirdArray = [{ id: 1}];
+const combine = thirdArray.concat(secondArray);
+combine[0].id = 10;
+console.log(combine);
