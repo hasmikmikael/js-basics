@@ -47,3 +47,7 @@ const crse = courses.findIndex(function(course) {
 });
 
 console.log(crse);
+
+//---------Arrow Functions----------
+const crs = courses.find(course => course.name === 'a');
+console.log(crs); // { id: 1, name: 'a' }
