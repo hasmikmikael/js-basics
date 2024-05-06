@@ -12,3 +12,15 @@ numbers.unshift(1, 2);
 numbers.splice(2, 0, 'a', 'b');
 
 console.log(numbers);
+
+
+//-------Finding Elements (Primitives)---------
+const num = [1, 2, 3, 1, 4];
+
+console.log(num.indexOf('a')); // -1
+console.log(num.indexOf(1)); // 0
+console.log(num.indexOf(1, 2)); // 3
+console.log(num.lastIndexOf(1)); // 3
+
+console.log(num.indexOf(1) !== -1); // this is an old approach // true
+console.log(num.includes(1)); // this is a new approach // true
