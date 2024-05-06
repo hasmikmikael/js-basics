@@ -119,3 +119,17 @@ const thirdArray = [{ id: 1}];
 const combine = thirdArray.concat(secondArray);
 combine[0].id = 10;
 console.log(combine);
+
+
+//------The Spread Operator----------
+const firstA = [1, 2, 3];
+const secondA = [4, 5, 6];
+
+//const combinedA = firstA.concat(secondA);
+const combinedA = [...firstA, ...secondA];
+//const combinedA = [...firstA, 'a', ...secondA, 'b'];
+console.log(combinedA); // [1, 2, 3, 4, 5, 6]
+
+//const copy = combinedA.slice();
+const copy = [...combinedA];
+console.log(copy); // [1, 2, 3, 4, 5, 6]
