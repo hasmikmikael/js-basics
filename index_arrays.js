@@ -24,3 +24,26 @@ console.log(num.lastIndexOf(1)); // 3
 
 console.log(num.indexOf(1) !== -1); // this is an old approach // true
 console.log(num.includes(1)); // this is a new approach // true
+
+
+//-------Finding Elements (Objects)---------
+const courses = [
+    { id: 1, name: 'a' },
+    { id: 2, name: 'b' },
+];
+
+console.log(courses.includes({ id: 1, name: 'a' })); // false
+
+const course = courses.find(function(course) {
+    return course.name === 'a'; // { id: 1, name: 'a' }
+    // return course.name === 'xyz'; // undefined
+});
+
+console.log(course);
+
+const crse = courses.findIndex(function(course) {
+    return course.name === 'a'; // 0
+    // return course.name === 'xyz'; // -1
+});
+
+console.log(crse);
