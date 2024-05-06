@@ -147,3 +147,17 @@ nmbs.forEach(function(nmb) {
 
 nmbs.forEach(nmb => console.log(nmb)); // 1 \n 2 \n 3
 nmbs.forEach((nmb, index) => console.log(index, nmb)); // 0 1 \n 1 2 \n 2 3
+
+
+// --------Joining Arrays---------------
+const nmbrs = [1, 2, 3];
+const joined = nmbrs.join(',');
+console.log(joined);
+
+const message = 'This is my first message';
+const parts = message.split(' ');
+console.log(parts);
+
+// we use this technick when we're building a URL slag
+const combinedJ = parts.join('-');
+console.log(combinedJ);
