@@ -250,3 +250,30 @@ const items3 = numbersM
     .filter(obj => obj.value > 1)
     .map(obj => obj.value); 
 console.log(items3); // [2, 3]
+
+
+//---------Reducing an Array---------------
+const numbersR = [1, -1, 2, 3];
+
+// this is old approach
+// let sum = 0;
+// for (let n of numbersR)
+//     sum += n;
+
+// this is new approach
+// // a = 0, c = 1 => a = 1
+// // a = 1, c = -1 => a = 0
+// // a = 0, c = 2 => a = 2
+// // a = 2, c = 3 => a = 5
+// const sum = numbersR.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// }, 0);
+
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
+const sum = numbersR.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);
+
+console.log(sum);
