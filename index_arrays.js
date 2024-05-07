@@ -217,3 +217,36 @@ const numbersF = [1, -1, 2, 3];
 const filtered = numbersF.filter(n => n >= 0);
 
 console.log(filtered); // [1, 2, 3]
+
+//-------Mapping an Array--------------
+const numbersM = [1, -1, 2, 3];
+
+const filteredM = numbersM.filter(n => n >= 0);
+
+const items = filteredM.map(n => '<li>' + n + '</li>');
+console.log(items); //  ['<li>1</li>', '<li>2</li>', '<li>3</li>']
+
+const html = '<ul>' + items.join('') + '</ul>';
+console.log(html); // <ul><li>1</li><li>2</li><li>3</li></ul>
+
+
+// const items1 = filteredM.map(n => {
+//     const obj = { value: n };
+//     return obj;
+// }); // or
+
+const items1 = filteredM.map(n => ({ value: n }));
+console.log(items1); // [ {value: 1}, {value: 2}, {value: 3}]
+
+// chaining methods filter() and map()
+const items2 = numbersM
+    .filter(n => n >= 0)
+    .map(n => ({ value: n }));
+console.log(items2); // [ {value: 1}, {value: 2}, {value: 3}]
+
+const items3 = numbersM
+    .filter(n => n >= 0)
+    .map(n => ({ value: n }))
+    .filter(obj => obj.value > 1)
+    .map(obj => obj.value); 
+console.log(items3); // [2, 3]
