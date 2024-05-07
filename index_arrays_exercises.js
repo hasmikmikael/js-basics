@@ -21,3 +21,18 @@ function includes(array, searchElement) {
       return true;
   return false;
 }
+
+// Exercise 3: Except
+const nmbs = [1, 2, 3, 4, 1, 1];
+
+const otpt = except(nmbs, [1, 2]);
+
+console.log(otpt);
+
+function except(array, excluded) {
+  const output = [];
+  for (let element of array)
+    if (!excluded.includes(element))
+      output.push(element);  
+  return output;
+}
