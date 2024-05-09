@@ -79,3 +79,28 @@ function countOccurrences(array, searchElement) {
         return accumulator + occurrence;
     }, 0);
 }
+
+// Exercise 6: Get Max
+const numbersGM = [1, 2, 3, 4];
+
+const max = getMax(numbersGM);
+
+console.log(max);
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+
+//   let max = array[0];
+//   for (let i = 1; i < array.length; i++)
+//     if (array[i] > max)
+//       max = array[i];
+
+//   return max;     
+// }
+
+// The same logic with the reduce() method
+function getMax(array) {
+    if (array.length === 0) return undefined;
+  
+    return array.reduce((a, b) => (a > b) ? a : b);    
+  }
