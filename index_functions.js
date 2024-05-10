@@ -48,3 +48,23 @@ function walk() {
 // };
 
 // run();
+
+
+//---------Arguments---------------
+function sum(a, b) {
+    return a + b; // 1 + undefined = NaN
+}
+
+console.log(sum(1, 2)); //3
+console.log(sum(1)); //NaN
+console.log(sum()); //NaN
+console.log(sum(1, 2, 3, 4, 5)); //3
+
+function sumArg() {
+    let total = 0;
+    for (let value of arguments)
+      total += value;
+    return total;
+}
+
+console.log(sumArg(1, 2, 3, 4, 5)); //15
