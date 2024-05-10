@@ -107,3 +107,32 @@ function interest(principal, years, rate = 3.5) {
 }
 
 console.log(interest(10000, 5));
+
+
+//------Getters and Setters---------------
+// const person = {
+//     firstName: 'Tim',
+//     lastName: 'Smith',
+//     // fullName: function() {}, // this is an old approach
+//     fullName() { // after ES6 this is the better approach
+//         return `${person.firstName} ${person.lastName}`;
+//     }
+// };
+
+// console.log(person.fullName()); // Tim Smith
+
+const person = {
+    firstName: 'Tim',
+    lastName: 'Smith',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`;
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.fullName = 'John Smith';
+console.log(person); // {firstName: 'John', lastName: 'Smith'}
