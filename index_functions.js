@@ -157,8 +157,37 @@ const personE = {
 
 try {
     // personE.fullName = null; // Value is not a string.
-    personE.fullName = ''; // Enter a first and last name.
+    // personE.fullName = ''; // Enter a first and last name.
 }
 catch(e) {
     alert(e);
 }
+
+
+//-------Local vs Global Scope-------------
+const color = 'red'; // this constant has global scope
+
+function start() {
+    const message = 'hi';
+    // const color = 'blue';
+    // console.log(color); //blue
+    console.log(color); // red
+
+    if (true) {
+        const another = 'bye'; // this constant has local scope
+    }
+
+    // console.log(another); // we will get an error
+
+    for (let i = 0; i < 5; i++) {
+        console.log(i); // 0, 1, 2, 3, 4
+    }
+
+    // console.log(i); // we will get an error
+}
+
+function stop() {
+    const message = 'bye';
+}
+
+start();
