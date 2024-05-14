@@ -217,3 +217,57 @@ start();
 
 var cr = 'red'; // window.cr // red
 let age = 30; // window.age // undefined
+
+
+//---------The 'this' keyword---------------
+
+// method -> obj
+// function -> global (window, global)
+
+const video = {
+    title: 'a',
+    play() {
+        console.log(this); // {title: 'a', play: ƒ}
+    }
+};
+
+video.play();
+
+video.stop = function() {
+    console.log(this); // {title: 'a', play: ƒ, stop: ƒ}
+}
+
+video.stop();
+
+// regular function
+function playVideo() {
+    console.log(this); // we get a window object
+}
+
+playVideo();
+
+// constructor function
+function Video(title) {
+    this.title = title;
+    console.log(this); // Video {title: 'b'}
+}
+
+const v = new Video('b');
+
+////////////////////////
+const videoA = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    // showTags() {
+    //     this.tags.forEach(function(tag) {
+    //         console.log(this, tag); // undefined a, undefined b, undefined c
+    //     }); // in this case this references window object
+    // } // because it's inside of the callback function
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title, tag); // a a, a b, a c
+        }, this);
+    }
+};
+
+videoA.showTags();
