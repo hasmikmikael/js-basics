@@ -191,3 +191,29 @@ function stop() {
 }
 
 start();
+
+
+//---------Let vs Var-----------
+// function start() {
+//     for (let i = 0; i < 5; i++)
+//       console.log(i);
+
+//     console.log(i); // we will get an error
+// }
+
+// start();
+
+function start() {
+    for (var i = 0; i < 5; i++)
+      console.log(i); // 0 1 2 3 4
+
+    console.log(i); // 5
+}
+
+start();
+
+// var => function-scoped
+// ES6 (ES2015): let, const => block-scoped
+
+var cr = 'red'; // window.cr // red
+let age = 30; // window.age // undefined
