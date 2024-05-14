@@ -271,3 +271,71 @@ const videoA = {
 };
 
 videoA.showTags();
+
+
+//---------Changing the Value of 'this'------------
+// 1st approach
+const videoC = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        const self = this;
+        this.tags.forEach(function(tag) {
+            console.log(self.title, tag); // a a, a b, a c
+        });
+    }
+};
+
+videoC.showTags();
+
+// /////////////
+// function playVideo() {
+//     console.log(this);
+// }
+
+// playVideo(); // this will references window object, we'll get the window object
+
+// playVideo.call({ name: 'Tim' }); // {name: 'Tim'}
+// playVideo.apply({ name: 'Tim' }); // {name: 'Tim'}
+
+/////////////////
+function playVideo(a, b) {
+    console.log(this);
+}
+
+playVideo(); // this will references window object, we'll get the window object
+
+playVideo.call({ name: 'Tim' }, 1, 2); // {name: 'Tim'}
+playVideo.apply({ name: 'Tim' }, [1, 2]); // {name: 'Tim'}
+
+const fn = playVideo.bind({ name: 'Tim' }); 
+fn(); // {name: 'Tim'}
+
+// we can write better way
+playVideo.bind({ name: 'Tim' })(); // {name: 'Tim'}
+
+// 2nd approach
+const videoV = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title, tag); // a a, a b, a c
+        }.bind(this));
+    }
+};
+
+videoV.showTags();
+
+// 3rd approach
+const videoT = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(tag => {
+            console.log(this.title, tag); // a a, a b, a c
+        });
+    }
+};
+
+videoT.showTags();
